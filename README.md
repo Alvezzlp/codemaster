@@ -97,7 +97,17 @@ Além disso, o código cria um sistema de troca automática, que faz o carrossel
 
 Por fim, o script inicia o carrossel quando a página carrega e adiciona um comportamento extra: quando o usuário passa o mouse sobre o carrossel, a troca automática é pausada, e quando o mouse sai, ela volta a funcionar. </p>
 
-- [ ] 9. Formulário de Contato
+- [✅] 9. Formulário de Contato
+
+<p> Primeiro, o código seleciona o formulário de contato e o elemento onde será exibida a mensagem de agradecimento.
+
+Depois, ele adiciona um evento de envio ao formulário. Isso significa que quando o usuário clicar no botão de enviar, uma função será executada.
+
+Quando o formulário é enviado, o código impede o comportamento padrão da página, que normalmente faria a página recarregar imediatamente. Em seguida, ele mostra a mensagem de agradecimento para o usuário.
+
+Depois disso, o script coleta todos os dados preenchidos no formulário e os envia para o endereço definido no atributo action do formulário usando a Fetch API.
+
+Se o envio for realizado com sucesso, o código aguarda 2 segundos e recarrega a página, limpando o formulário. Caso ocorra algum erro no envio ou na conexão, uma mensagem de alerta é exibida informando o problema. </p>
 
 - [ ] 10. Seção Sobre Mim
  
