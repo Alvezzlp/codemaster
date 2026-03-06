@@ -148,3 +148,78 @@ document.querySelector('.top a').addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola suavemente para o topo da página
 });
+
+// ================== CARROSSEL DE PROJETOS ==================
+// Seleciona os elementos do carrossel
+const carouselSlides = document.querySelector('.carousel-slides');
+const slides = document.querySelectorAll('.carousel-slide');
+const prevButton = document.querySelector('.carousel-button.prev');
+const nextButton = document.querySelector('.carousel-button.next');
+
+let currentSlide = 0;
+let autoSlideInterval;
+
+// Função para exibir o slide atual
+function showSlide(slideIndex) {
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+        slide.style.display = 'none';
+    });
+
+    // Ajusta o índice para não sair dos limites
+    if (slideIndex < 0) {
+        currentSlide = slides.length - 1;
+    } else if (slideIndex >= slides.length) {
+        currentSlide = 0;
+    } else {
+        currentSlide = slideIndex;
+    }
+
+    // Mostra o slide atual
+    slides[currentSlide].classList.add('active');
+    slides[currentSlide].style.display = 'flex';
+}
+
+// Próximo slide
+function nextSlide() {
+    showSlide(currentSlide + 1);
+    resetAutoSlide();
+}
+
+// Slide anterior
+function prevSlide() {
+    showSlide(currentSlide - 1);
+    resetAutoSlide();
+}
+
+// Inicia troca automática
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 5000);
+}
+
+// Reinicia troca automática
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Eventos dos botões
+if (nextButton && prevButton) {
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+}
+
+// Inicializa carrossel
+window.addEventListener('load', () => {
+    showSlide(currentSlide);
+    startAutoSlide();
+});
+
+// Pausar quando mouse estiver sobre o carrossel
+if (carouselSlides) {
+    carouselSlides.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+    });
+
+    carouselSlides.addEventListener('mouseleave', startAutoSlide);
+}

@@ -73,7 +73,7 @@ Quando a seção sai da tela, ela volta ao estado inicial (invisível e transfor
 
 - [✅] 7. Botão de voltar ao topo
 
-<p>O código seleciona o link do botão de voltar ao topo da página, que está dentro de um elemento com a classe “top”.
+<p> O código seleciona o link do botão de voltar ao topo da página, que está dentro de um elemento com a classe “top”.
 
 Depois, ele adiciona um evento de clique nesse botão.
 
@@ -83,7 +83,19 @@ Em seguida, o script usa uma função do navegador para rolar a página suavemen
 
 Assim, quando o botão é clicado, o site volta para o início da página com uma animação suave de rolagem.</p>
 
-- [ ] 8. Carrossel de Projetos
+- [✅] 8. Carrossel de Projetos
+
+<p> Primeiro, o código seleciona os elementos do carrossel, como o container dos slides, cada slide individual e os botões de avançar e voltar.
+
+Depois, ele cria uma variável para controlar qual slide está sendo exibido no momento e outra para controlar a troca automática dos slides.
+
+Em seguida, é criada uma função responsável por mostrar o slide atual. Para isso, o código esconde todos os slides e depois exibe apenas o slide correspondente ao índice atual.
+
+O script também cria duas funções para navegar entre os slides: uma para ir para o próximo slide e outra para voltar ao anterior. Quando o usuário usa os botões, o slide muda e o tempo da troca automática é reiniciado.
+
+Além disso, o código cria um sistema de troca automática, que faz o carrossel avançar para o próximo slide a cada 5 segundos.
+
+Por fim, o script inicia o carrossel quando a página carrega e adiciona um comportamento extra: quando o usuário passa o mouse sobre o carrossel, a troca automática é pausada, e quando o mouse sai, ela volta a funcionar. </p>
 
 - [ ] 9. Formulário de Contato
 
