@@ -35,7 +35,19 @@ Em seguida, o tema escolhido é salvo no navegador usando o localStorage. Isso p
 
 Por fim, quando a página carrega, o código verifica se existe um tema salvo no localStorage. Se existir, ele aplica automaticamente esse tema, mantendo o site no mesmo modo que o usuário escolheu anteriormente. </p>
 
-- [ ] 4. Animação do Título
+- [✅] 4. Animação do Título
+
+<p> Primeiro, o código seleciona o elemento do título da página e define o texto que será exibido (por exemplo: “CODEMASTER”). Também são criadas algumas variáveis para controlar a posição das letras e o estado da animação.
+
+Depois, é criada uma função responsável por animar o texto do título. Essa função faz com que as letras apareçam uma por uma, simulando um efeito de digitação.
+
+Quando todas as letras já foram exibidas, o código muda o modo da animação e começa a apagar as letras aos poucos, criando o efeito contrário.
+
+Quando o texto é quase totalmente apagado, a animação reinicia o processo de digitação e alterna a cor do título, mudando entre a cor padrão do tema (preto ou branco) e uma cor de destaque (laranja).
+
+Além disso, o código possui uma função que atualiza a cor do texto de acordo com o tema do site (claro ou escuro), garantindo que o título continue visível.
+
+Por fim, quando a página é carregada, a animação do título é iniciada automaticamente.</p>
 
 - [ ] 5. Animação da Seção Home
 
