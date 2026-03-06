@@ -49,7 +49,15 @@ Além disso, o código possui uma função que atualiza a cor do texto de acordo
 
 Por fim, quando a página é carregada, a animação do título é iniciada automaticamente.</p>
 
-- [ ] 5. Animação da Seção Home
+- [✅] 5. Animação da Seção Home
+
+<p> Primeiro definimos alguns estilos iniciais para essa seção, deixando ela invisível e um pouco deslocada para baixo.
+
+Em seguida, o código cria uma transição suave, que controla a forma como a animação vai acontecer.
+
+Após um pequeno atraso, os estilos são alterados: a seção fica visível novamente e volta para sua posição original.
+
+Com isso, é criado um efeito de aparecimento suave, fazendo a seção inicial surgir na tela quando a página é carregada.</p>
 
 - [ ] 6. Animação das Seções
 
