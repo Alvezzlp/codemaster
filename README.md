@@ -71,7 +71,17 @@ Quando uma seção entra na tela, o código remove a transformação e deixa a o
 
 Quando a seção sai da tela, ela volta ao estado inicial (invisível e transformada). Assim, quando o usuário voltar até ela, a animação acontece novamente. </p>
 
-- [ ] 7. Botão de voltar ao topo
+- [✅] 7. Botão de voltar ao topo
+
+<p>O código seleciona o link do botão de voltar ao topo da página, que está dentro de um elemento com a classe “top”.
+
+Depois, ele adiciona um evento de clique nesse botão.
+
+Quando o usuário clica, o código cancela o comportamento padrão do link, que normalmente faria a página pular diretamente para outro lugar.
+
+Em seguida, o script usa uma função do navegador para rolar a página suavemente até o topo.
+
+Assim, quando o botão é clicado, o site volta para o início da página com uma animação suave de rolagem.</p>
 
 - [ ] 8. Carrossel de Projetos
 
