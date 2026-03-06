@@ -59,7 +59,17 @@ Após um pequeno atraso, os estilos são alterados: a seção fica visível nova
 
 Com isso, é criado um efeito de aparecimento suave, fazendo a seção inicial surgir na tela quando a página é carregada.</p>
 
-- [ ] 6. Animação das Seções
+- [✅] 6. Animação das Seções
+
+<p> Primeiro, o código seleciona todas as seções da página para aplicar animações quando elas aparecerem na tela.
+
+Depois, ele define um estado inicial para cada seção, deixando todas invisíveis e configurando uma transição suave. Além disso, algumas seções recebem transformações diferentes, como aparecer de baixo para cima, diminuir de tamanho ou girar.
+
+Em seguida, é criado um IntersectionObserver, que observa quando cada seção entra ou sai da área visível da tela enquanto o usuário rola a página.
+
+Quando uma seção entra na tela, o código remove a transformação e deixa a opacidade em 1, fazendo com que ela apareça com animação.
+
+Quando a seção sai da tela, ela volta ao estado inicial (invisível e transformada). Assim, quando o usuário voltar até ela, a animação acontece novamente. </p>
 
 - [ ] 7. Botão de voltar ao topo
 
