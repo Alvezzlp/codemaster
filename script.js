@@ -11,7 +11,7 @@ menuIcon.addEventListener('click', () => {
 });
 
 // Fechar menu ao cliclar em links
-document.querySelectorAll('.navList a').forEach(link => {
+document.querySelectorAll('.navlist a').forEach(link => {
     link.addEventListener('click', () => {
         menuIcon.classList.remove('bx-x');
         navList.classList.remove('open');
@@ -105,7 +105,7 @@ updateTextColor();
 // Seleciona a seção home e aplica uma animação de fade-in
 const homeSection = document.querySelector('#home');
 homeSection.style.opacity = '0';
-homeSection.style.transform = 'TranslateY(20px)';
+homeSection.style.transform = 'translateY(20px)';
 homeSection.style.transition = 'opacity 1s ease, transform 1s ease';
 
 setTimeout(() => {
@@ -251,3 +251,24 @@ contactForm.addEventListener('submit', (e) => {
     .catch(() => alert('Erro na conexão. Tente novamente'));
 });
 
+// ================== ANIMAÇÃO DA SEÇÃO "SOBRE MIM" ==================
+// Seleciona a seção "Sobre Mim"
+const aboutSection = document.querySelector('.about');
+
+// Função para verificar se a seção está visivel na tela
+function checkAboutVisibility() {
+    const rect = aboutSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    // Verifica se a seção está dentro da área visível da tela
+    if (rect.top <= windowHeight * 0.75 && rect.bottom >= 0) {
+        aboutSection.classList.add('visible'); // Adiciona a classe "visible"
+        window.removeEventListener('scroll', checkAboutVisibility); // Remove o listener após a animação
+    }
+}
+
+// Adiciona um listener para o evento de scroll
+window.addEventListener('scroll', checkAboutVisibility);
+
+// Verifica a visibilidade ao carregar a página (caso a seção já esteja visível)
+checkAboutVisibility();
